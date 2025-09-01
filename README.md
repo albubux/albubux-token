@@ -1,60 +1,51 @@
 # Albubux (BUBX)
 
-**Network:** BNB Smart Chain (BEP‑20)  
-**Symbol:** BUBX  
-**Total supply:** 400,000,000,000,000 BUBX (18 decimals)  
-**Tax:** 0% buy / transfers, **1% sell** by default (sent to `feeReceiver`).
+Albubux is a viral token with a mission — more than just a meme, it’s designed for real impact, utility, and unstoppable growth. Built on Binance Smart Chain (BEP-20), Albubux combines deflationary mechanics, liquidity generation, and eco/charity support to create long-term value.
 
-Albubux is a simple, fixed‑supply BEP‑20 token designed for transparency and ease of verification.
-The contract uses OpenZeppelin libraries and applies a small sell fee only when tokens are sold to a DEX pair.
+## 📊 Token Info
+- **Name**: Albubux  
+- **Symbol**: BUBX  
+- **Network**: Binance Smart Chain (BEP-20)  
+- **Total Supply**: 4,000,000,000,000,000 BUBX  
+- **Decimals**: 9  
+- **Contract Type**: Liquidity Generator Token  
+
+## 🔑 Key Features
+- **Fixed supply** – no further minting.  
+- **0% buy tax** and wallet-to-wallet transfers.  
+- **1% sell tax**:  
+  - 0.5% auto liquidity (PancakeSwap).  
+  - 0.5% marketing & charity wallet.  
+- **Deflationary system** – unsold tokens in presale are burned.  
+- **Owner functions**:  
+  - Adjust fees (up to 3% max).  
+  - Update marketing/charity wallet.  
+  - Exclude/include wallets from fees and rewards.  
+  - Manage liquidity pool settings.  
+
+## 📈 Tokenomics
+- **Presale**: 45–50% supply.  
+- **Liquidity**: 25–30%.  
+- **Marketing & charity**: 10–15%.  
+- **Team reserve**: 5–10%.  
+- **Airdrops**: up to 5%.  
+
+## ⚙️ Compile / Verify
+1. Open [Remix](https://remix.ethereum.org).  
+2. Create `Albubux.sol` and paste the contract code.  
+3. Compiler version: **0.8.19**, optimization **200 runs**.  
+4. Deploy to **BSC mainnet** via MetaMask.  
+5. Constructor argument: `feeReceiver` (your marketing wallet).  
+6. Verify contract on [BscScan](https://bscscan.com/verifyContract).  
+
+## 🌍 Roadmap
+1. Presale launch on PinkSale ✅  
+2. PancakeSwap listing ✅  
+3. CoinMarketCap & CoinGecko fast-track 🚀  
+4. Global marketing campaign 🎯  
+5. Eco & charity partnerships 🌱  
+6. Albubux as a **utility token** for payments 💳  
 
 ---
 
-## 📦 Contents
-- `contracts/Albubux.sol` – Solidity source code
-- `LICENSE` – MIT
-- `README.md` – this file
-
-## 🔧 Key features
-- Fixed supply minted at deployment (no further minting).
-- 0% buy and wallet‑to‑wallet transfers.
-- Optional sell‑fee (default 1%, capped at 3%) sent to a configurable `feeReceiver`.
-- Owner can:
-  - set/adjust `sellFeeBps` (max 3%),
-  - update `feeReceiver`,
-  - mark/unmark AMM pairs (e.g., PancakeSwap pair address),
-  - exclude specific addresses from fees (owner/contract/receiver are excluded by default).
-
-## 🧪 Compile / Verify
-Use Remix or Hardhat with OpenZeppelin Contracts **v4.9** and Solidity `^0.8.19`.
-
-### Remix (quickest)
-1. Open https://remix.ethereum.org
-2. Create `Albubux.sol` and paste the contents from `contracts/Albubux.sol`.
-3. In the Solidity compiler:
-   - Compiler version: `0.8.19`
-   - Enable optimization (optional, 200 runs).
-4. Deploy to **BSC** (testnet or mainnet) using an injected wallet (MetaMask).  
-   **Constructor argument:** `feeReceiver` (your marketing/treasury wallet).
-
-### After deploy (owner actions)
-- Call `setAMMPair(pairAddress, true)` for your PancakeSwap pair to enable sell‑fee on DEX sells.
-- If needed, adjust `setSellFeeBps(100)` (1% = 100 bps; max 300).
-- Optionally update `setFeeReceiver(newWallet)`.
-- Use `setFeeExempt(addr, true)` for presale contracts, liquidity locker, etc., if needed.
-
-### BscScan verification
-When verifying on BscScan:
-- Compiler: `0.8.19`
-- License: **MIT**
-- Optimization: same settings as in deployment
-
-> Tip: If using imports, enable “via‑IR” off and paste the file using Remix’s “Flatten” or Hardhat’s flatten plugins.
-
-## ⚠️ Disclaimers
-- This repository is provided **as is**, without warranty. Audit before mainnet use.
-- Taxes above 3% are intentionally disallowed by code for investor safety.
-- This token has no reflection/rebase/blacklist mechanics and no auto‑swap; the fee is a direct transfer to `feeReceiver`.
-
-## 📝 License
-MIT
+💡 Albubux is not just a meme — it’s the **token of the future**! 🚀🌎 
